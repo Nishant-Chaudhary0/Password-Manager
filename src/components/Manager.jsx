@@ -44,7 +44,7 @@ const Manager = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-100 via-pink-300 to-pink-500 px-6 py-10">
-      <h1 className="text-4xl font-bold text-center text-pink-500 mb-2"> &lt; PassOP &gt;</h1>
+      <h1 className="text-4xl font-bold text-center text-pink-500 mb-2"> &lt; SafeKeys &gt;</h1>
       <p className="text-lg text-center text-pink-500 mb-6">Your own Password Manager</p>
 
       <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6 space-y-4">
@@ -101,7 +101,7 @@ const Manager = () => {
                 >
                   <td className="px-6 py-3">{item.site}</td>
                   <td className="px-6 py-3">{item.username}</td>
-                  <td className="px-6 py-3">{item.password}</td>
+                  <td className="px-6 py-3">{"*".repeat(item.password.length)}</td>
                   <td className="px-6 py-3">
                     <div className="flex gap-3">
                       <button
@@ -128,7 +128,7 @@ const Manager = () => {
         </div>
       </div>
       <div className="flex justify-center py-4">
-        <span>Made with ❤️ by <b>Nishant</b></span>
+        <span className="text-white">Made with ❤️ by <b>Nishant</b></span>
       </div>
     </div>
   );
